@@ -4,7 +4,18 @@ from Wallet import Wallet
 from BlockChain import BlockChain 
 
 class Node():
-    def __init__(self, wallet_dir= None, chain_dir = None, node_type = 'miner'):
+    def __init__(self, network_info_dir):
+        
+        self.wallet_dir = None 
+        self.chain_dir = None
+        self.node_type = 'miner'
+        self.network_info_dir = network_info_dir
+        get_network_info(self.network_info_dir) 
+        
         self.wallet = Wallet(wallet_dir) 
         self.blockchain = BlockChain(chain_dir)
-        self.node_type = node_type 
+    
+    
+    def get_network_info(self, network_info_dir):
+        
+        pass 

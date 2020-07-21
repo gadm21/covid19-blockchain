@@ -10,7 +10,7 @@ import os
 
 class Wallet():
 	
-	def __init__(self, network_info_dir, key_dir= None):
+	def __init__(self, key_dir= None):
 		self.private_Key= None
 		self.public_Key =None
 		self.ser_private_key = None
@@ -18,12 +18,7 @@ class Wallet():
 		self.PADDING = padding.PSS(mgf=padding.MGF1(hashes.SHA256()),  salt_length= padding.PSS.MAX_LENGTH)
 		if key_dir : self.load_key(key_dir)
 
-        get_network_info(network_info_dir) 
-    
-    
-    def get_network_info(self, network_info_dir):
-        
-        pass 
+
         
 	def generate_keys(self):
 		self.private_key = rsa.generate_private_key(65537,1024,default_backend())
