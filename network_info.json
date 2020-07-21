@@ -1,11 +1,11 @@
+
 {
-    "nodes":[
-        1234,
-        1254
-    ],
-    "node":{
+    "node": {
         "node_type": "miner",
-        "chain_dir": 0,
-        "wallet_dir": 0
+        "wallet_dir": 0,
+        "chain_dir": 0
+    },
+    "nodes":{
+        
     }
 }
