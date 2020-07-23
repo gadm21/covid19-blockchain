@@ -90,5 +90,8 @@ if __name__ == "__main__":
 
     w2 = Wallet(key_dir = os.getcwd()) 
     pri, pub = w2.serialize() 
+    print()
     print(pri) 
+    print() 
     print(pub) 
+
